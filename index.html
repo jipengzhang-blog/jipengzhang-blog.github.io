@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>张吉鹏教授 - 个人主页</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- Tailwind 配置 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#165DFF',
+            secondary: '#36BFFA',
+            accent: '#FF7D00',
+            dark: '#1D2939',
+            light: '#F9FAFB'
+          },
+          fontFamily: {
+            inter: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.02);
+      }
+      .timeline-line {
+        @apply absolute top-0 bottom-0 left-4 w-0.5 bg-primary/20;
+      }
+      .timeline-dot {
+        @apply absolute left-2 w-5 h-5 rounded-full bg-primary border-4 border-white z-10;
+      }
+    }
+  </style>
+  <style type="text/css">
+  .id {
+}
+  </style>
+</head>
+
+<body class="font-inter bg-gray-50 text-dark">
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed w-full bg-white/90 backdrop-blur-sm z-50 transition-all duration-300 shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold text-primary flex items-center">
+        <span>张吉鹏教授</span>
+      </a>
+      
+      <!-- 桌面导航 -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="text-gray-700 hover:text-primary transition-colors">个人信息</a>
+        <a href="#education" class="text-gray-700 hover:text-primary transition-colors">教育背景</a>
+        <a href="#experience" class="text-gray-700 hover:text-primary transition-colors">工作经历</a>
+		<a href="#research" class="text-gray-700 hover:text-primary transition-colors">研究方向</a>
+		<a href="#publications" class="text-gray-700 hover:text-primary transition-colors">发表论文</a>
+        <a href="#data" class="text-gray-700 hover:text-primary transition-colors">数据中心</a>
+        <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">联系方式</a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+        <a href="#about" class="text-gray-700 hover:text-primary transition-colors py-2">个人信息</a>
+        <a href="#education" class="text-gray-700 hover:text-primary transition-colors py-2">教育背景</a>
+        <a href="#experience" class="text-gray-700 hover:text-primary transition-colors py-2">工作经历</a>
+        <a href="#research" class="text-gray-700 hover:text-primary transition-colors py-2">研究方向</a>
+        <a href="#publications" class="text-gray-700 hover:text-primary transition-colors py-2">发表论文</a>
+        <a href="#contact" class="text-gray-700 hover:text-primary transition-colors py-2">联系方式</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 英雄区域 -->
+  <section id="home" class="pt-28 pb-16 md:pt-40 md:pb-24 bg-gradient-to-br from-primary/5 to-primary/10">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/3 mb-8 md:mb-0">
+          <div class="relative">
+            <img src="CgECYmP85LeAGipZAAC2ZvyzoSA853.png" alt="张吉鹏教授照片" class="w-full h-auto rounded-lg shadow-xl hover-scale">
+            <div class="absolute -bottom-4 -right-4 bg-primary text-white text-sm font-bold px-4 py-2 rounded-full">
+              经济学院教授
+            </div>
+          </div>
+        </div>
+        
+        <div class="md:w-2/3 md:pl-12">
+          <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-dark mb-4">
+            张吉鹏 <span class="text-primary">教授</span>
+          </h1>
+          <h2 class="text-[clamp(1.5rem,3vw,2rem)] text-gray-600 mb-6">
+            山东大学经济学院教授
+          </h2>
+          <p class="text-lg text-gray-700 mb-8 max-w-3xl">
+            现任山东大学经济学院教授，中青年杰出学者。主要研究方向为公共经济学，移民、区域与城市发展。在《中国社会科学》、《经济研究》、《经济学（季刊）》以及International Economic Review等国内外顶级期刊发表论文，获高等学校科学研究优秀成果（人文社会科学）二等奖，主持国家自然科学基金面上项目。
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href="#contact" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg shadow-md transition-all flex items-center">
+              <i class="fa fa-envelope-o mr-2"></i> 联系我
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 个人信息 -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">个人信息</h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">基本情况</h3>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="w-24 text-gray-600 font-medium">姓名：</div>
+              <div class="text-gray-800">张吉鹏</div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-24 text-gray-600 font-medium">性别：</div>
+              <div class="text-gray-800">男</div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-24 text-gray-600 font-medium">职称：</div>
+              <div class="text-gray-800">教授</div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-24 text-gray-600 font-medium">邮箱：</div>
+              <div class="text-gray-800">jipengzhang@sdu.edu.cn</div>
+            </div>
+<div class="flex items-start">
+            <div class="w-24 text-gray-600 font-medium">办公地点：</div>
+              <div class="text-gray-800">山东大学洪家楼校区</div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-24 text-gray-600 font-medium">研究领域：</div>
+              <div class="text-gray-800">公共经济学，移民、区域与城市发展、中国经济</div>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">个人简介</h3>
+          <p class="text-gray-700 mb-4">
+            张吉鹏，山东大学经济学院教授，中青年杰出学者。主要研究方向为公共经济学，移民、区域与城市发展。在《中国社会科学》、《经济研究》、《经济学（季刊）》以及International Economic Review等国内外顶级期刊发表论文，获高等学校科学研究优秀成果（人文社会科学）二等奖，主持国家自然科学基金面上项目。
+          </p>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 教育背景 -->
+  <section id="education" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">教育背景</h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      
+      <div class="relative">
+        <!-- 时间线 -->
+        <div class="timeline-line"></div>
+        
+        <!-- 教育经历项 -->
+        <div class="space-y-12 ml-12">
+          <!-- 博士 -->
+          <div class="relative pl-8">
+            <div class="timeline-dot" style="top: 10px;"></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-primary">匹兹堡大学</h3>
+                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">2005.8 — 2011.7</span>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-800 mb-2">经济学 哲学博士学位</h4>
+</div>
+          </div>
+          
+          <!-- 硕士 -->
+          <div class="relative pl-8">
+            <div class="timeline-dot" style="top: 10px;"></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-primary">复旦大学</h3>
+                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">2002.9 — 2005.7</span>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-800 mb-2">经济学 经济学硕士学位</h4>
+</div>
+          </div>
+          
+          <!-- 本科 -->
+          <div class="relative pl-8">
+            <div class="timeline-dot" style="top: 10px;"></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-primary">复旦大学</h3>
+                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">1992.9 — 2000.7</span>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-800 mb-2">经济学 经济学学士学位</h4>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作经历 -->
+  <section id="experience" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">工作经历</h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      
+      <div class="relative">
+        <!-- 时间线 -->
+        <div class="timeline-line"></div>
+        
+        <!-- 工作经历项 -->
+        <div class="space-y-12 ml-12">
+          <!-- 现任 -->
+          <div class="relative pl-8">
+            <div class="timeline-dot" style="top: 10px;"></div>
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary hover-scale">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-primary">山东大学</h3>
+                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">2022.12-至今</span>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-800 mb-2">经济学院教授</h4>
+</div>
+          </div>
+          
+          <!-- 之前 -->
+          <div class="relative pl-8">
+            <div class="timeline-dot" style="top: 10px;"></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-primary">西南财经大学</h3>
+                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">2014.12-2022.12</span>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-800 mb-2">教授</h4>
+</div>
+          </div>
+          
+          <!-- 实习 -->
+          <div class="relative pl-8">
+            <div class="timeline-dot" style="top: 10px;"></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-primary">新加坡南洋理工大学</h3>
+</div>
+              <h4 class="text-lg font-semibold text-gray-800 mb-2">助理教授&nbsp;</h4>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 研究方向 -->
+  <section id="research" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">研究方向</h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 研究方向1 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover-scale">
+          <div class="h-48 bg-primary/20 relative">
+            <img src="https://picsum.photos/seed/cv/600/400" alt="计算机视觉研究方向" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold">扶贫搬迁的长期发展与人力资本积累</h3>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-700 mb-4">
+              主要研究
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">扶贫搬迁&nbsp;</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">长期发展&nbsp;</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">人力资本积累&nbsp;</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 研究方向2 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover-scale">
+          <div class="h-48 bg-primary/20 relative">
+            <img src="https://picsum.photos/seed/dl/600/400" alt="深度学习研究方向" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold">移民与户籍制度改革</h3>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-700 mb-4">
+              专注于。
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">移民&nbsp;</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">户籍&nbsp;</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">户籍制度改革&nbsp;</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 研究方向3 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover-scale">
+          <div class="h-48 bg-primary/20 relative">
+            <img src="https://picsum.photos/seed/recognition/600/400" alt="模式识别研究方向" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold">公共品供给</h3>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-700 mb-4">
+              研究。
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">公共品供给&nbsp;</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">#&nbsp;</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">#&nbsp;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 研究项目 -->
+      <div class="mt-16">
+        <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">主要研究项目</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- 项目1 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-flask text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">加快农业转移人口市民化的主要困境与解决思路研究</h4>
+                <p class="text-gray-500 text-sm">国家社会科学基金重大专项立项 (2024-)</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+              本项目着眼于由以下方面展开如何快速推进农业转移人口市民化进程的研究：系统分析农业转移人口市民化现状、动态和发展趋势，并基于空间一般均衡模型建立统一的分析框架；以农业转移人口市民化过程中的公共服务供给均等化和相应的空间公共财政体制改革为研究重点，对住房保障、子女教育、就业服务以及空间财政提出相应的解决思路；对户籍制度改革的进展和现状进行系统的数量评估，分析农业转移人口“愿落不能落”“能落不愿落”以及“能落愿落没有落”的主要困境和解决思路；探究如何大力发展社会组织，寻找以“政策政府主导，社会组织辅助”的思路，采用一对一帮扶、自愿帮扶等方式，快速推进农业转移人口市民化进程；以非自愿农业转移人口的市民化为自然实验和案例，研究农业转移人口的长期发展问题以及相对应的解决方式，为农业转移人口市民化的长期发展提供解决思路和建议。
+            </p>
+          </div>
+          
+          <!-- 项目2 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-eye text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">课题2&nbsp;</h4>
+                <p class="text-gray-500 text-sm">国家</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+              本项目研究
+            </p>
+          </div>
+          
+          <!-- 项目3 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-brain text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">课题3</h4>
+                <p class="text-gray-500 text-sm">基金</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+              本项目研究。
+            </p>
+          </div>
+          
+          <!-- 项目4 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-computer text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">课题4</h4>
+                <p class="text-gray-500 text-sm">项目</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+              本项目
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+	
+
+
+   <!-- 发表论文 -->
+    <section id="publications" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">发表论文</h2>
+                <div>
+			</div>
+           </div>
+            
+            <div class="flex flex-wrap justify-center mb-8 gap-4">
+            </div>
+            
+            <div class="space-y-6" id="publications-container">
+                <!-- 论文1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-start">
+                        <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                生育决策：理论、实证与政策评估
+                            </h3>
+                            <p class="text-gray-600 mb-2">
+                              商倩倩,殷永昆,张吉鹏
+                          </p>
+                            <p class="text-gray-500 mb-3">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济学动态</span>
+                                <span class="ml-2">2025</span>
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                本文总结了生育政策评估的研究，梳理了生育支持政策（如产假制度和育儿补贴）及计划生育政策的研究内容及其效果，并比较了简约式估计与结构模型分析两种政策评估工具的优劣和适用范围。
+                          </p>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="生育决策：理论、实证与政策评估.pdf" target="_blank" class="text-primary hover:underline text-sm flex items-center transition-all duration-200 px-2 py-1 rounded hover:bg-primary/10">
+                                <i class="fa fa-download mr-2"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 论文2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-start">
+                        <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                慈善组织声誉与信息披露对捐赠意愿和风险态度的正向影响
+                            </h3>
+                            <p class="text-gray-600 mb-2">
+                              张吉鹏,李禹燊,陈希多
+                          </p>
+                            <p class="text-gray-500 mb-3">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济学(季刊)</span>
+                                <span class="ml-2">2025</span>
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                本文通过设计基于中国慈善组织的捐赠实验,测度被试在不同风险状态下的捐赠意愿及其与慈善组织声誉和披露方式的关系。
+                          </p>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="慈善组织声誉与信息披露对捐赠意愿和风险态度的正向影响.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                    <i class="fa fa-download mr-1"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 论文3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-start">
+                        <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                法治强化与家庭慈善捐赠：基于《慈善法》实施的准自然实验
+                            </h3>
+                            <p class="text-gray-600 mb-2">
+                              张衡,张吉鹏
+                          </p>
+                            <p class="text-gray-500 mb-3">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">世界经济</span>
+                                <span class="ml-2">2025</span>
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                本文利用2014-2020年中国家庭追踪调查（CFPS）数据，以《中华人民共和国慈善法》的颁布作为准自然实验，通过双重差分模型考察法治强化如何影响家庭捐赠。
+                          </p>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="法治强化与家庭慈善捐赠：基于《慈善法》实施的准自然实验.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                    <i class="fa fa-download mr-1"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 论文4 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-start">
+                        <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                户籍制度改革对城镇居民家庭消费的影响
+                            </h3>
+                            <p class="text-gray-600 mb-2">
+                              毛盛志,王军辉,张吉鹏
+                          </p>
+                            <p class="text-gray-500 mb-3">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">中国农村经济</span>
+                                <span class="ml-2">2025</span>
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                本文基于中国家庭消费的特征事实，创建一个包含户籍制度和内生移民决策的理论框架，从迁移决策与落户选择、生育与教育支出、居住成本和社会保障等维度，探讨户籍制度改革对城镇居民家庭消费的影响。
+                          </p>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="户籍制度改革对城镇居民家庭消费的影响.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                    <i class="fa fa-download mr-1"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 论文5 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-start">
+                        <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                户籍制度改革与城市落户门槛的量化分析：1996—2024
+                            </h3>
+                            <p class="text-gray-600 mb-2">
+                              张吉鹏,陈翥
+                          </p>
+                            <p class="text-gray-500 mb-3">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济学(季刊)</span>
+                                <span class="ml-2">2024</span>
+                            </p>
+                            <p class="text-gray-700 mb-4">户籍改革对劳动力统一大市场、农业转移人口市民化和城乡融合发展有重要意义,但现有研究缺乏对2016年之后户籍改革重要进展的量化分析。
+                                本文提出了一种基于强化学习的神经网络架构搜索方法，用于设计高效的移动设备端神经网络。
+                          </p>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="户籍制度改革与城市落户门槛的量化分析：1996—2024.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                    <i class="fa fa-download mr-1"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 更多论文（初始隐藏） -->
+        <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+        <div >
+			</div>
+            </div>
+			
+                <div class="hidden more-publications">
+					<div class="space-y-6" id="more-publications">
+                    <!-- 论文6 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    随迁还是留守：异地入学门槛对农村流动人口子女的影响
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    王茹,胡竞尹,徐舒,张吉鹏
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济学(季刊)</span>
+                                    <span class="ml-2">2023</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    在新型城镇化和城乡融合发展的背景下,经济可持续发展亟须提高农村家庭人力资本积累质量,解决流动人口子女入学问题。本文构建了流动人口子女义务教育入学门槛指数。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="随迁还是留守：异地入学门槛对农村流动人口子女的影响.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 论文7 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    搬迁扶贫对代际流动的长期影响
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    卢冲,张吉鹏
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济学(季刊)</span>
+                                    <span class="ml-2">2023</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    本文基于1994年的一个准自然实验和跨长时期的追溯数据，分析了搬迁扶贫对代际流动的长期影响。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="搬迁扶贫对代际流动的长期影响.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+				<!-- 论文8 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    家庭住房需求和资产配置——基于包含人力资本和禀赋异质性的生命周期模型
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    张吉鹏,葛鑫,毛盛志
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济研究</span>
+                                    <span class="ml-2">2021</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    识别和区分家庭住房需求和资产配置受生命周期、代际和时间的不同影响,对于准确把握房地产和金融资产需求的长期趋势,推进相关市场的长效机制建设有重要意义。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="家庭住房需求和资产配置——基于包含人力资本和禀赋异质性的生命周期模型.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button id="load-more-btn" class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg shadow-md transition-all flex items-center justify-center mx-auto">
+                    查看更多论文 <i class="fa fa-arrow-down ml-2"></i>
+                </button>
+            </div>
+        </div>
+			</div>
+			</div>
+    </section>
+	
+	
+	  	      <!-- 数据中心 -->
+	  <section id="data" class="py-16 bg-white">
+      <div class="mt-16">
+        <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">数据中心</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- 项目1 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-flask text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">数据1&nbsp;</h4>
+               
+				<a href="01.rar" class="text-primary hover:underline text-sm flex items-center">
+                  <i class="fa fa-download mr-1"></i> 下载
+                </a>  
+              </div>
+            </div>
+            <p class="text-gray-700">
+            来源/简介&nbsp;&nbsp; </p>
+          </div>
+          
+          <!-- 项目2 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-eye text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">数据2&nbsp;</h4>
+                <p class="text-gray-500 text-sm">下载&nbsp;</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+            来源/简介&nbsp; </p>
+          </div>
+          
+          <!-- 项目3 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-brain text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">数据3&nbsp;</h4>
+                <p class="text-gray-500 text-sm">下载&nbsp;</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+              来源/简介
+            </p>
+          </div>
+          
+          <!-- 项目4 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-computer text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">数据4&nbsp;</h4>
+                <p class="text-gray-500 text-sm">下载&nbsp;</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+              来源/简介
+            </p>
+          </div>
+        </div>
+       </div>
+    </section>
+
+
+  <!-- 联系方式 -->
+  <section id="contact" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">联系方式</h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <div class="bg-white p-8 rounded-lg shadow-md h-full">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">联系信息</h3>
+            
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                  <i class="fa fa-map-marker"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">地址</h4>
+                  <p class="text-gray-600">
+                    中国山东省济南市山大南路27号<br>
+                    邮编：250100
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                  <i class="fa fa-envelope"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">电子邮箱</h4>
+                  <p class="text-gray-600">
+                    jipengzhang@sdu.edu.cn<br>
+                    
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                  <i class="fa fa-phone"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">办公地点</h4>
+                  <p class="text-gray-600">
+                    山东大学洪家楼校区<br>
+                    
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                  <i class="fa fa-clock-o"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">办公时间</h4>
+                  <p class="text-gray-600">
+                    周一至周五: 9:00 - 12:00, 14:00 - 17:00<br>
+                    预约优先，请提前邮件联系
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8">
+<div class="flex space-x-4"> </div>
+            </div>
+          </div>
+        </div>
+</div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white py-12">
+    <div class="container mx-auto px-4"> </div>
+  </footer>
+
+  <!-- 回到顶部按钮 -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all z-50">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script>
+    // 导航栏滚动效果
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('py-2', 'shadow-md');
+        navbar.classList.remove('py-3');
+      } else {
+        navbar.classList.add('py-3');
+        navbar.classList.remove('py-2', 'shadow-md');
+      }
+    });
+    
+    // 移动端菜单切换
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      if (mobileMenu.classList.contains('hidden')) {
+        menuToggle.innerHTML = '<i class="fa fa-bars text-xl"></i>';
+      } else {
+        menuToggle.innerHTML = '<i class="fa fa-times text-xl"></i>';
+      }
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          
+          // 关闭移动端菜单
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            menuToggle.innerHTML = '<i class="fa fa-bars text-xl"></i>';
+          }
+        }
+      });
+    });
+	  
+	  
+     	   const loadMoreBtn = document.getElementById('load-more-btn');
+            const morePublications = document.querySelectorAll('.more-publications');
+            let isExpanded = false;
+            
+            loadMoreBtn.addEventListener('click', function() {
+                isExpanded = !isExpanded;
+                
+                if (isExpanded) {
+                    // 显示更多论文
+                    morePublications.forEach(el => {
+                        el.classList.remove('hidden');
+                        el.classList.add('animate-fadeIn');
+                    });
+                    loadMoreBtn.innerHTML = '收起论文 <i class="fa fa-arrow-up ml-2"></i>';
+                    
+                    // 平滑滚动到第一个新加载的论文
+                    setTimeout(() => {
+                        const firstExpandedPub = document.querySelector('.more-publications > div:first-child');
+                        if (firstExpandedPub) {
+                            firstExpandedPub.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 300);
+                } else {
+                    // 隐藏更多论文
+                    morePublications.forEach(el => {
+                        el.classList.add('hidden');
+                    });
+                    loadMoreBtn.innerHTML = '查看更多论文 <i class="fa fa-arrow-down ml-2"></i>';
+                }
+            });
+            
+            
+    // 回到顶部按钮
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        backToTopButton.classList.remove('opacity-0', 'invisible');
+        backToTopButton.classList.add('opacity-100', 'visible');
+      } else {
+        backToTopButton.classList.add('opacity-0', 'invisible');
+        backToTopButton.classList.remove('opacity-100', 'visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // 论文筛选
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // 移除所有按钮的活动状态
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-primary', 'text-white');
+          btn.classList.add('bg-gray-200', 'hover:bg-primary', 'hover:text-white');
+        });
+        
+        // 添加当前按钮的活动状态
+        button.classList.remove('bg-gray-200', 'hover:bg-primary', 'hover:text-white');
+        button.classList.add('bg-primary', 'text-white');
+        
+        // 这里可以添加实际的筛选逻辑
+        const filter = button.textContent.trim();
+        console.log('筛选:', filter);
+      });
+    });
+  </script>
+</body>
+</html>
+    
