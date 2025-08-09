@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professor Zhang Jipeng - Personal Homepage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- Tailwind 配置 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#165DFF',
+            secondary: '#36BFFA',
+            accent: '#FF7D00',
+            dark: '#1D2939',
+            light: '#F9FAFB'
+          },
+          fontFamily: {
+            inter: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.02);
+      }
+      .timeline-line {
+        @apply absolute top-0 bottom-0 left-4 w-0.5 bg-primary/20;
+      }
+      .timeline-dot {
+        @apply absolute left-2 w-5 h-5 rounded-full bg-primary border-4 border-white z-10;
+      }
+    }
+  </style>
+  <style type="text/css">
+  .id {
+}
+  </style>
+</head>
+
+<body class="font-inter bg-gray-50 text-dark">
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed w-full bg-white/90 backdrop-blur-sm z-50 transition-all duration-300 shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold text-primary flex items-center">
+        <span>Professor Zhang Jipeng</span>
+      </a>
+      
+      <!-- 桌面导航 -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#about" class="text-gray-700 hover:text-primary transition-colors">Personal Information</a>
+        <a href="#education" class="text-gray-700 hover:text-primary transition-colors"> Educational Backgrounds</a>
+        <a href="#experience" class="text-gray-700 hover:text-primary transition-colors">Work Experience</a>
+		<a href="#research" class="text-gray-700 hover:text-primary transition-colors">Research Interests</a>
+		<a href="#publications" class="text-gray-700 hover:text-primary transition-colors">Publications</a>
+        <a href="#data" class="text-gray-700 hover:text-primary transition-colors">Data Centre</a>
+        <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact Details</a>
+		  		  		            		  <!-- en.html -->
+          <a href="index.html">Chinese</a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+        <a href="#about" class="text-gray-700 hover:text-primary transition-colors py-2">Personal Information</a>
+        <a href="#education" class="text-gray-700 hover:text-primary transition-colors py-2">Educational Backgrounds</a>
+        <a href="#experience" class="text-gray-700 hover:text-primary transition-colors py-2">Work Experience</a>
+        <a href="#research" class="text-gray-700 hover:text-primary transition-colors py-2">Research Interests</a>
+        <a href="#publications" class="text-gray-700 hover:text-primary transition-colors py-2">Publications</a>
+		<a href="#data" class="text-gray-700 hover:text-primary transition-colors py-2">Data Centre</a>
+        <a href="#contact" class="text-gray-700 hover:text-primary transition-colors py-2">Contact Details</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 英雄区域 -->
+  <section id="home" class="pt-28 pb-16 md:pt-40 md:pb-24 bg-gradient-to-br from-primary/5 to-primary/10">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/3 mb-8 md:mb-0">
+          <div class="relative">
+            <img src="CgECYmP85LeAGipZAAC2ZvyzoSA853.png" alt="张吉鹏教授照片" class="w-full h-auto rounded-lg shadow-xl hover-scale">
+            <div class="absolute -bottom-4 -right-4  rounded-full">
+            </div>
+          </div>
+        </div>
+        
+        <div class="md:w-2/3 md:pl-12">
+          <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold leading-tight text-dark mb-4">
+            Zhang Jipeng <span class="text-primary">Professor</span>
+          </h1>
+          <h2 class="text-[clamp(1.5rem,3vw,2rem)] text-gray-600 mb-6">
+            Professor of the School of Economics, Shandong University
+          </h2>
+          <p class="text-lg text-gray-700 mb-8 max-w-3xl">
+             An Outstanding Young and Middle-aged Scholar, His main research areas include public economics, migration, and regional and urban development. He has published papers in top domestic and international journals such as 《中国社会科学》, 《经济研究》, 《经济学（季刊）》, and International Economic Review. He was awarded the Second Prize of the Higher Education Outstanding Scientific Research Output Award (Humanities and Social Sciences) and has presided over a General Program of the National Natural Science Foundation of China.
+          </p>
+          
+          <div class="flex flex-wrap gap-4">
+            <a href="#contact" class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg shadow-md transition-all flex items-center">
+              <i class="fa fa-envelope-o mr-2"></i> contact me
+
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 个人信息 -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">personal information</h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">Basic Information</h3>
+          <div class="space-y-4">
+            <div class="flex items-start">
+              <div class="w-24 text-gray-600 font-medium">Name：</div>
+              <div class="text-gray-800">Zhang Jipeng</div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-24 text-gray-600 font-medium">Gender：</div>
+              <div class="text-gray-800">Man</div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-24 text-gray-600 font-medium">Professional Title：</div>
+              <div class="text-gray-800">Professor</div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-24 text-gray-600 font-medium">E-mail：</div>
+              <div class="text-gray-800">jipengzhang@sdu.edu.cn</div>
+            </div>
+<div class="flex items-start">
+            <div class="w-24 text-gray-600 font-medium">Office Location：</div>
+              <div class="text-gray-800">Hongjialou Campus of Shandong University</div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-24 text-gray-600 font-medium">Research Field：</div>
+              <div class="text-gray-800">Public economics, immigration, regional and urban development, Chinese economy</div>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">Personal Profile</h3>
+          <p class="text-gray-700 mb-4">
+            Zhang Jipeng is a Professor at the School of Economics, Shandong University, and an Outstanding Young and Middle-aged Scholar. His main research areas include public economics, migration, and regional and urban development. He has published papers in top domestic and international journals such as 《中国社会科学》, 《经济研究》, 《经济学（季刊）》, and International Economic Review. He was awarded the Second Prize of the Higher Education Outstanding Scientific Research Output Award (Humanities and Social Sciences) and has presided over a General Program of the National Natural Science Foundation of China.
+          </p>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 教育背景 -->
+  <section id="education" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">Educational Backgrounds</h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      
+      <div class="relative">
+        <!-- 时间线 -->
+        <div class="timeline-line"></div>
+        
+        <!-- 教育经历项 -->
+        <div class="space-y-12 ml-12">
+          <!-- 博士 -->
+          <div class="relative pl-8">
+            <div class="timeline-dot" style="top: 10px;"></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-primary">University of Pittsburgh</h3>
+                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">2005.8 — 2011.7</span>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-800 mb-2">Doctor of Philosophy degree</h4>
+</div>
+          </div>
+          
+          <!-- 硕士 -->
+          <div class="relative pl-8">
+            <div class="timeline-dot" style="top: 10px;"></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-primary">Fudan University</h3>
+                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">2002.9 — 2005.7</span>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-800 mb-2">Master of Economics</h4>
+</div>
+          </div>
+          
+          <!-- 本科 -->
+          <div class="relative pl-8">
+            <div class="timeline-dot" style="top: 10px;"></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-primary">Fudan University</h3>
+                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">1992.9 — 2000.7</span>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-800 mb-2">Bachelor of Economics</h4>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作经历 -->
+  <section id="experience" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">Work Experience</h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      
+      <div class="relative">
+        <!-- 时间线 -->
+        <div class="timeline-line"></div>
+        
+        <!-- 工作经历项 -->
+        <div class="space-y-12 ml-12">
+          <!-- 现任 -->
+          <div class="relative pl-8">
+            <div class="timeline-dot" style="top: 10px;"></div>
+            <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-primary hover-scale">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-primary">Shandong University</h3>
+                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">2022.12-至今</span>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-800 mb-2">Professor of the School of Economics</h4>
+</div>
+          </div>
+          
+          <!-- 之前 -->
+          <div class="relative pl-8">
+            <div class="timeline-dot" style="top: 10px;"></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-primary">Southwestern University of Finance and Economics</h3>
+                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">2014.12-2022.12</span>
+              </div>
+              <h4 class="text-lg font-semibold text-gray-800 mb-2">Professor</h4>
+</div>
+          </div>
+          
+          <!-- 实习 -->
+          <div class="relative pl-8">
+            <div class="timeline-dot" style="top: 10px;"></div>
+            <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-3">
+                <h3 class="text-xl font-bold text-primary">NANYANG Technological University Singapore</h3>
+				  <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">2011.08-2014.12</span>
+</div>
+              <h4 class="text-lg font-semibold text-gray-800 mb-2">Assistant Professor&nbsp;</h4>
+</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 研究方向 -->
+  <section id="research" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">Research Interests</h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- 研究方向1 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover-scale">
+          <div class="h-48 bg-primary/20 relative">
+            <img src="https://picsum.photos/seed/cv/600/400" alt="计算机视觉研究方向" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold">The long-term development of poverty alleviation relocation and human capital accumulation</h3>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-700 mb-4">
+              主要研究
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">poverty alleviation and relocation&nbsp;</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">long-term development&nbsp;</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">human capital accumulation&nbsp;</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 研究方向2 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover-scale">
+          <div class="h-48 bg-primary/20 relative">
+            <img src="https://picsum.photos/seed/dl/600/400" alt="深度学习研究方向" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold">Reform of the immigration and household registration system</h3>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-700 mb-4">
+              专注于。
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Immigrant&nbsp;</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Household registration&nbsp;</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Reform of household registration system&nbsp;</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 研究方向3 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover-scale">
+          <div class="h-48 bg-primary/20 relative">
+            <img src="https://picsum.photos/seed/recognition/600/400" alt="模式识别研究方向" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <h3 class="absolute bottom-4 left-4 text-white text-xl font-bold">supply of public goods</h3>
+          </div>
+          <div class="p-6">
+            <p class="text-gray-700 mb-4">
+              研究。
+            </p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">supply of public goods&nbsp;</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">#&nbsp;</span>
+              <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">#&nbsp;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 研究项目 -->
+      <div class="mt-16">
+        <h3 class="text-2xl font-bold text-gray-800 text-center">Major Research Project</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- 项目1 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-flask text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">Research on Major Challenges and Solution Strategies for Accelerating Urban Integration of Rural-to-Urban Migrants</h4>
+                <p class="text-gray-500 text-sm">国家社会科学基金重大专项立项 (2024-)</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+              This project focuses on researching how to accelerate the urbanization process of rural-to-urban migrants through the following aspects: systematically analyzing the current status, dynamics, and development trends of migrant urbanization, and establishing a unified analytical framework based on a spatial general equilibrium model; prioritizing the study of equal access to public services during urbanization and corresponding spatial fiscal system reforms, proposing solutions for housing security, children's education, employment services, and spatial fiscal arrangements; conducting a systematic quantitative assessment of the progress and current state of household registration (hukou) system reform, analyzing the main challenges and solutions for migrants who are "willing but unable to obtain permanent residency," "able but unwilling to obtain residency," and "able and willing but have not obtained residency"; exploring how to vigorously develop social organizations, seeking an approach of "government-led policy with social organization assistance" through methods like one-to-one support and voluntary assistance to rapidly advance migrant urbanization; using the urbanization of involuntary migrants as a natural experiment and case study to research long-term development issues and corresponding solutions for rural-to-urban migrants, providing insights and recommendations for their sustainable urbanization.
+            </p>
+          </div>
+          
+          <!-- 项目2 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-eye text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">课题2&nbsp;</h4>
+                <p class="text-gray-500 text-sm">国家</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+              本项目研究
+            </p>
+          </div>
+          
+          <!-- 项目3 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-brain text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">课题3</h4>
+                <p class="text-gray-500 text-sm">基金</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+              本项目研究。
+            </p>
+          </div>
+          
+          <!-- 项目4 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-computer text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">课题4</h4>
+                <p class="text-gray-500 text-sm">项目</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+              本项目
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+	
+
+
+   <!-- 发表论文 -->
+    <section id="publications" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">Publications</h2>
+                <div>
+			</div>
+           </div>
+            
+            <div class="flex flex-wrap justify-center mb-8 gap-4">
+            </div>
+            
+            <div class="space-y-6" id="publications-container">
+                <!-- 论文1 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-start">
+                        <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                生育决策：理论、实证与政策评估
+                            </h3>
+                            <p class="text-gray-600 mb-2">
+                              商倩倩,殷永昆,张吉鹏
+                          </p>
+                            <p class="text-gray-500 mb-3">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济学动态</span>
+                                <span class="ml-2">2025</span>
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                本文总结了生育政策评估的研究，梳理了生育支持政策（如产假制度和育儿补贴）及计划生育政策的研究内容及其效果，并比较了简约式估计与结构模型分析两种政策评估工具的优劣和适用范围。
+                          </p>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="生育决策：理论、实证与政策评估.pdf" target="_blank" class="text-primary hover:underline text-sm flex items-center transition-all duration-200 px-2 py-1 rounded hover:bg-primary/10">
+                                <i class="fa fa-download mr-2"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 论文2 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-start">
+                        <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                慈善组织声誉与信息披露对捐赠意愿和风险态度的正向影响
+                            </h3>
+                            <p class="text-gray-600 mb-2">
+                              张吉鹏,李禹燊,陈希多
+                          </p>
+                            <p class="text-gray-500 mb-3">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济学(季刊)</span>
+                                <span class="ml-2">2025</span>
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                本文通过设计基于中国慈善组织的捐赠实验,测度被试在不同风险状态下的捐赠意愿及其与慈善组织声誉和披露方式的关系。
+                          </p>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="慈善组织声誉与信息披露对捐赠意愿和风险态度的正向影响.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                    <i class="fa fa-download mr-1"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 论文3 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-start">
+                        <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                法治强化与家庭慈善捐赠：基于《慈善法》实施的准自然实验
+                            </h3>
+                            <p class="text-gray-600 mb-2">
+                              张衡,张吉鹏
+                          </p>
+                            <p class="text-gray-500 mb-3">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">世界经济</span>
+                                <span class="ml-2">2025</span>
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                本文利用2014-2020年中国家庭追踪调查（CFPS）数据，以《中华人民共和国慈善法》的颁布作为准自然实验，通过双重差分模型考察法治强化如何影响家庭捐赠。
+                          </p>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="法治强化与家庭慈善捐赠：基于《慈善法》实施的准自然实验.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                    <i class="fa fa-download mr-1"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 论文4 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-start">
+                        <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                户籍制度改革对城镇居民家庭消费的影响
+                            </h3>
+                            <p class="text-gray-600 mb-2">
+                              毛盛志,王军辉,张吉鹏
+                          </p>
+                            <p class="text-gray-500 mb-3">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">中国农村经济</span>
+                                <span class="ml-2">2025</span>
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                本文基于中国家庭消费的特征事实，创建一个包含户籍制度和内生移民决策的理论框架，从迁移决策与落户选择、生育与教育支出、居住成本和社会保障等维度，探讨户籍制度改革对城镇居民家庭消费的影响。
+                          </p>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="户籍制度改革对城镇居民家庭消费的影响.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                    <i class="fa fa-download mr-1"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+				<!-- 论文5 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-start">
+                        <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                Recent progress in hukou reform and labor market integration in China: 1996-2022
+                            </h3>
+                            <p class="text-gray-600 mb-2">
+                              Chen, Zhu; Shang, Qianqian; Zhang, Jipeng
+                          </p>
+                            <p class="text-gray-500 mb-3">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">CHINA ECONOMIC REVIEW</span>
+                                <span class="ml-2">2024</span>
+                            </p>
+                            <p class="text-gray-700 mb-4">We find that the average settlement probability has been steadily increasing since 1999, reaching 91% in 2022, and 15 provinces have achieved low thresholds. We further build a simple general spatial equilibrium model with the factor of settlement probability to investigate the impacts of hukou reform. 
+                          </p>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="Recent progress in hukou reform and labor market integration in China: 1996-2022.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                    <i class="fa fa-download mr-1"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <!-- 论文6 -->
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                    <div class="flex items-start">
+                        <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                            <i class="fa fa-file-text-o"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                户籍制度改革与城市落户门槛的量化分析：1996—2024
+                            </h3>
+                            <p class="text-gray-600 mb-2">
+                              张吉鹏,陈翥
+                          </p>
+                            <p class="text-gray-500 mb-3">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济学(季刊)</span>
+                                <span class="ml-2">2024</span>
+                            </p>
+                            <p class="text-gray-700 mb-4">户籍改革对劳动力统一大市场、农业转移人口市民化和城乡融合发展有重要意义,但现有研究缺乏对2016年之后户籍改革重要进展的量化分析。
+                                本文提出了一种基于强化学习的神经网络架构搜索方法，用于设计高效的移动设备端神经网络。
+                          </p>
+                            <div class="flex flex-wrap gap-2">
+                                <a href="户籍制度改革与城市落户门槛的量化分析：1996—2024.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                    <i class="fa fa-download mr-1"></i> PDF
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 更多论文（初始隐藏） -->
+        <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+        <div >
+			</div>
+            </div>
+			
+                <div class="hidden more-publications">
+					<div class="space-y-6" id="more-publications">
+                    <!-- 论文7 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    随迁还是留守：异地入学门槛对农村流动人口子女的影响
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    王茹,胡竞尹,徐舒,张吉鹏
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济学(季刊)</span>
+                                    <span class="ml-2">2023</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    在新型城镇化和城乡融合发展的背景下,经济可持续发展亟须提高农村家庭人力资本积累质量,解决流动人口子女入学问题。本文构建了流动人口子女义务教育入学门槛指数。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="随迁还是留守：异地入学门槛对农村流动人口子女的影响.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+			   <!-- 论文8 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    The Impact of Local Fiscal and Migration Policies on Human Capital Accumulation and Inequality in China
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    By Holger Sieg, Chamna Yoon, Jipeng Zhang
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">INTERNATIONAL ECONOMIC REVIEW</span>
+                                    <span class="ml-2">2023</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    We develop and estimate a spatial overlapping generations model with heterogeneous households to study the feasibility of a recently proposed reform of internal migration policies that offers the potential of decreasing inequality within China. 
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="The Impact of Local Fiscal and Migration Policies on Human Capital Accumulation and Inequality in China.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+						
+                    <!-- 论文9 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    搬迁扶贫对代际流动的长期影响
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    卢冲,张吉鹏
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济学(季刊)</span>
+                                    <span class="ml-2">2023</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    本文基于1994年的一个准自然实验和跨长时期的追溯数据，分析了搬迁扶贫对代际流动的长期影响。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="搬迁扶贫对代际流动的长期影响.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+				<!-- 论文10 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    In vino veritas? Communication under the influence-An experimental study
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    Pak Hung Au, Wooyoung Lim, Jipeng Zhang
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">JOURNAL OF ECONOMIC BEHAVIOR & ORGANIZATION</span>
+                                    <span class="ml-2">2023</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    We report results from controlled laboratory experiments designed to investigate the effects of drinking alcohol on communication and transactions. In a game played in laboratory experiments, sellers who are privately informed about their asset’s quality communicate and trade with potential buyers after both parties drink their given alcoholic beverages.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="In vino veritas? Communication under the influence-An experimental study.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+				  <!-- 论文11 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    环境治理的绩效评估及其对地方经济的影响——基于2017年“2+26”城大气污染治理与督察的实证分析
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    张吉鹏,彭靖秋
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">安徽师范大学学报(人文社会科学版)</span>
+                                    <span class="ml-2">2022</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    本文研究发现2017年秋冬季京津冀地区大气污染治理和督查显著改进了该地区的空气质量，PM2.5相对于平均值下降了19%;AQI指数下降了15%。在这次环境治理行动中，环保督察对于空气质量改善的即期影响十分明显，但环境政策在有效抑制污染的同时也对当地经济造成了显著的负面影响。环保治理政策使得受影响城市2017年的GDP增速下降了大约13%，工业生产增速降幅约为24%，但是这些城市的公共财政与居民收入增速在短期没有明显变化。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="环境治理的绩效评估及其对地方经济的影响——基于2017年“2+26”城大气污染治理与督察的实证分析.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+				<!-- 论文12 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    家庭住房需求和资产配置——基于包含人力资本和禀赋异质性的生命周期模型
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    张吉鹏,葛鑫,毛盛志
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济研究</span>
+                                    <span class="ml-2">2021</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    识别和区分家庭住房需求和资产配置受生命周期、代际和时间的不同影响,对于准确把握房地产和金融资产需求的长期趋势,推进相关市场的长效机制建设有重要意义。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="家庭住房需求和资产配置——基于包含人力资本和禀赋异质性的生命周期模型.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+						
+					<!-- 论文13 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    城市落户门槛与劳动力回流
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    张吉鹏,黄金,王军辉,黄勔
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济研究</span>
+                                    <span class="ml-2">2020</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                   劳动力回流是理解户籍改革对空间经济结构影响的关键。已有研究大多依据是否有户籍地以外的生活经历来定义回流， 忽视了大规模的户籍迁移群体。本文利用 2017 年与 2019 年中国家庭金融调查数据， 对回流进行了更准确的测度和区分， 分析发现: 跨市回流群体在劳动人口中的比重超过跨市流动人口占比; 回流人口多从经济发达地区回到欠发达的户籍所在地的城镇地区; 回流群体在外务工期间和回到户籍地后的稳定性都不高。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="城市落户门槛与劳动力回流.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+						
+				<!-- 论文14 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    Return migration and Hukou registration constraints in Chinese cities
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    Jipeng Zhanga, Jin Huanga, Junhui Wanga, Liang Guo
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">CHINA ECONOMIC REVIEW</span>
+                                    <span class="ml-2">2020</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    This paper documents the patterns of return migration and labor mobility constraints in China using two unique data: the 2017 China Household Finance Survey and a newly developed urban Hukou registration index. 
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="Return migration and Hukou registration constraints in Chinese cities.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+						
+					<!-- 论文15 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    The long-run effects of poverty alleviation resettlement on child development: Evidence from a quasi-experiment in China
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    Lue Zhan, Jipeng Zhang， Chong Lu
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">DEMOGRAPHIC RESEARCH</span>
+                                    <span class="ml-2">2020</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    The paper investigates the potential bad consequences of poverty alleviate resettlement on children’s long-run development. From a policy perspective, in the program we studied, people in the treated group are simply resettled to a designated area. A “one to many” relocation with free destination choices might be better.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="The long-run effects of poverty alleviation resettlement on child development: Evidence from a quasi-experiment in China.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+			
+					<!-- 论文16 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    Endogenous Authority and Enforcement in Public Goods Games
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    Wooyoung Lim，Jipeng Zhang
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">B E JOURNAL OF THEORETICAL ECONOMICS</span>
+                                    <span class="ml-2">2020</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    This paper investigates theoretically and experimentally the social benefits and cost to have an endogenous punishment-enforcing authority in public goods game. 
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="Endogenous Authority and Enforcement in Public Goods Games.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+						
+				<!-- 论文17 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    Effect of religious priming in prosocial and destructive behaviour
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    Jipeng Zhang1，Elizabeth Brown2，Huan Xie
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">PACIFIC ECONOMIC REVIEW</span>
+                                    <span class="ml-2">2020</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    In this paper, we study the behavioural impact of religious priming by showing participants religious words in a scrambled sentence task before a dictator game and a joyof-destruction game. 
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="Effect of religious priming in prosocial and destructive behaviour.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+						
+			<!-- 论文18 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    Hierarchy Leadership and Social Distance in Charitable Giving
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    Jipeng Zhang，Elizabeth Brown，Huan Xie
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">PACIFIC ECONOMIC REVIEW</span>
+                                    <span class="ml-2">2019</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    In this paper, we study the behavioural impact of religious priming by showing participants religious words in a scrambled sentence task before a dictator game and a joyof-destruction game. 
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="Hierarchy Leadership and Social Distance in Charitable Giving.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+						
+				<!-- 论文19 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    户籍制度改革与城市落户门槛的量化分析
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    张吉鹏,卢冲
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济学(季刊)</span>
+                                    <span class="ml-2">2019</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    研究发现,一线城市和部分二线城市设置了较高的落户门槛,而且有上升趋势;三、四和五线城市总体上落户门槛较低而且呈下降趋势。人口规模、公共服务和经济发展水平是与落户门槛相关性较强的主要因素。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="户籍制度改革与城市落户门槛的量化分析.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+						
+			<!-- 论文20 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    A quantitative analysis of Hukou reform in Chinese cities: 2000-2016
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    Jipeng Zhang，Ru Wang，Chong Lu
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">GROWTH AND CHANGE</span>
+                                    <span class="ml-2">2019</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    This paper documents the changes in China's Hukou reform before and after 2014 based on a unique data set of Hukou policy documents from Chinese cities between 2000 and 2016. 
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="A quantitative analysis of Hukou reform in Chinese cities: 2000-2016.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+						
+				<!-- 论文21 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    The long-run effects of poverty alleviation resettlement on child development: Evidence from a quasi-experiment in China
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    Lue Zhan, Jipeng Zhang， Chong Lu
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">DEMOGRAPHIC RESEARCH</span>
+                                    <span class="ml-2">2020</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    The paper investigates the potential bad consequences of poverty alleviate resettlement on children’s long-run development. From a policy perspective, in the program we studied, people in the treated group are simply resettled to a designated area. A “one to many” relocation with free destination choices might be better.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="The long-run effects of poverty alleviation resettlement on child development: Evidence from a quasi-experiment in China.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+													
+					<!-- 论文22 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    Status Incentives and Corporate Giving: Evidence From China's Political Reform On Private Enterprises
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                   Zhao Chen， Jipeng Zhang
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">PACIFIC ECONOMIC REVIEW</span>
+                                    <span class="ml-2">2017</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    In this paper, we estimate the effect of status incentives on charitable giving by exploiting a natural experiment during China’s political reform in 2002 that significantly improved the status of private entrepreneurs and their enterprises. 
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="Status Incentives and Corporate Giving: Evidence From China's Political Reform On Private Enterprises.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+						
+					<!-- 论文23 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    Government intervention, land market, and urban development: evidence from chinese cities
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                   Zhang Jipeng,Fan, Jianyong, Mo, Jiawei
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">ECONOMIC INQUIRY</span>
+                                    <span class="ml-2">2017</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    This article investigates how government intervention in land market affects China's urban development, using data from prefecture-level cities between 2000 and 2010. We find that government intervention enlarges the impact of positive productivity shocks on housing price appreciation, through mainly the government control over residential land supply.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="Government intervention, land market, and urban development: evidence from chinese cities.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+					
+					<!-- 论文24 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    Deal or no deal The effect of alcohol drinking on bargaining
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                   Au, Pak Hung, Zhang Jipeng
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">JOURNAL OF ECONOMIC BEHAVIOR & ORGANIZATION</span>
+                                    <span class="ml-2">2016</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    Alcohol drinking during business negotiation is a very common practice, particularly in some East Asian countries. Does alcohol consumption affect negotiator's strategy and consequently the outcome of the negotiation?
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="Deal or no deal The effect of alcohol drinking on bargaining.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+						
+					<!-- 论文25 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    Bubbles and Experience: An Experiment with a Steady Inflow of New Traders
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                   Huan Xie, Jipeng Zhang
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">SOUTHERN ECONOMIC JOURNAL</span>
+                                    <span class="ml-2">2016</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    We revisit the effect of traders experience on price bubbles by introducing either one-third or two-thirds steady inflow of new traders in each of four consecutive experimental asset markets.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="Bubbles and Experience: An Experiment with a Steady Inflow of New Traders.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+						
+	          <!-- 论文26 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    Impact of urbanization on cultivated land changes in China
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                   Deng, Xiangzheng,  Huang, Huang Jikun, Rozelle, Scott, Zhang, Jipeng, Li, Zhihui
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">LAND USE POLICY</span>
+                                    <span class="ml-2">2015</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    This article aims to evaluate the impact of urbanization and different urbanization modes on cultivated land changes using an econometric model that incorporates socio-economic and policy factors in the eastern China, which experience the great urbanization in recent years. 
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="Impact of urbanization on cultivated land changes in China.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+						
+				<!-- 论文27 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    居住模式与中国城镇化——基于土地供给视角的经验研究
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    范剑勇,莫家伟,张吉鹏
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">中国社会科学</span>
+                                    <span class="ml-2">2015</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                   研究发现,中国特色的城镇化道路,可以用新增常住人口居住在价格低廉的非普通商品房为主的模式来解释,工业用地扩张推动城市常住人口增长、房价上升,但降低了工资水平。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="居住模式与中国城镇化——基于土地供给视角的经验研究.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+						
+							<!-- 论文28-->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    The importance of managerial capacity in fundraising: Evidence from land conservation charities
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    Sieg, Holger, Zhang, Jipeng
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">INTERNATIONAL ECONOMIC REVIEW</span>
+                                    <span class="ml-2">2012</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                   This article provides an empirical analysis of the role that private benefits play in explaining charitable donations to large cultural and environmental organizations. We develop a multiple discrete choice model with differentiated products. 
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="The importance of managerial capacity in fundraising: Evidence from land conservation charities.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+						
+			   <!-- 论文29 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    The Effectiveness of Private Benefits in Fundraising of Local Charities
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    BY HOLGER SIEG, JIPENG ZHANG
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">INTERNATIONAL JOURNAL OF INDUSTRIAL ORGANIZATION</span>
+                                    <span class="ml-2">2012</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                   The objective of this paper is to show the importance of incorporating managerial capacity into the empirical analysis of the determinants of donations to charitable organizations. We adopt a production function approach to model the outcome of the fundraising process.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="The Effectiveness of Private Benefits in Fundraising of Local Charities.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+						
+			<!-- 论文30 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    反腐败、市场建设与经济增长
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                     孙刚,陆铭,张吉鹏
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济学(季刊)</span>
+                                    <span class="ml-2">2005</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                   本文通过一个经济增长模型讨论了代表社会利益的政府如何规划反腐败路径,并保证经济的增长。分析结果表明,政府是可能在反腐败的同时实现经济增长的。一旦政府开始加大反腐败力度,则社会的腐败程度将持续下降。随着市场的完善,经济资源可以更好地借助于市场机制进行配置,这时社会可以加大打击腐败的力度。如果腐败的路径依赖性更强,政府也将加强对腐败的打击。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="反腐败、市场建设与经济增长.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+						
+						<!-- 论文31 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    中国地区差距:度量与成因
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                     	张吉鹏,吴桂英
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">世界经济文汇</span>
+                                    <span class="ml-2">2004</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                   本文是对有关中国地区差距度量和成因研究的一个评述 ,分别综述和评论了通过不平等指数对地区差距进行描述和分解的研究 ,以及在新古典增长理论的框架中检验各地区经济增长经历是否满足收敛假说的研究 ,进而讨论了现有研究存在的问题和进一步的研究方向。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="中国地区差距:度量与成因.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+						
+						<!-- 论文32 -->
+						<div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    新经济地理学与中国产业地理集聚——兼评杨宝良的《外部经济与产业地理集聚》
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                     	张吉鹏
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">世界经济文汇</span>
+                                    <span class="ml-2">2004</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                   本文回顾了新经济地理学的思想脉络 ,并分析了其思想之于中国的适用性 ,然后讨论了基于中国经验的实证研究。文章认为新经济地理学研究的现象和问题在中国同样存在 ,对这些现象和问题的分析非常重要 ;而且其基本假定、核心思想和分析方法对于中国来说也是适用的 ;但是相关的实证研究在解释变量和被解释变量的界定和选择上需要考虑中国的特殊情况 ,已有研究还存在一些有待深入探讨的问题。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="新经济地理学与中国产业地理集聚——兼评杨宝良的《外部经济与产业地理集聚》.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+						
+				<!-- 论文33 -->			
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover-scale">
+                        <div class="flex items-start">
+                            <div class="bg-primary/10 text-primary p-2 rounded mr-4 mt-1">
+                                <i class="fa fa-file-text-o"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-800 mb-2">
+                                    中国省际物质资本存量估算：1952—2000
+                                </h3>
+                                <p class="text-gray-600 mb-2">
+                                    张军,吴桂英,张吉鹏
+                                </p>
+                                <p class="text-gray-500 mb-3">
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">经济研究</span>
+                                    <span class="ml-2">2004</span>
+                                </p>
+                                <p class="text-gray-700 mb-4">
+                                    通过回顾和比较已有研究中国资本存量的相关文献，考虑到中国国内生产总值历史数据的几次重大补充和调整，本文对各年投资流量、投资品价格指数、折旧率/重置率、基年资本存量的选择与构造以及缺失数据进行了认真的处理和研究，并在此基础上利用补充和调整后的分省数据，根据永续盘存法估计了中国大陆30个省区市1952—2000年各年末的物质资本存量。
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <a href="中国省际物质资本存量估算：1952—2000.pdf" class="text-primary hover:underline text-sm flex items-center">
+                                        <i class="fa fa-download mr-1"></i> PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button id="load-more-btn" class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg shadow-md transition-all flex items-center justify-center mx-auto">
+                    View more papers <i class="fa fa-arrow-down ml-2"></i>
+                </button>
+            </div>
+        </div>
+			</div>
+			</div>
+    </section>
+	
+	
+	  	      <!-- 数据中心 -->
+	  <section id="data" class="py-16 bg-white">
+      <div class="mt-16">
+        <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Data Centre</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- 项目1 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-flask text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">Data1&nbsp;</h4>
+               
+				<a href="01.rar" class="text-primary hover:underline text-sm flex items-center">
+                  <i class="fa fa-download mr-1"></i> Download
+                </a>  
+              </div>
+            </div>
+            <p class="text-gray-700">
+            Source/Introduction&nbsp;&nbsp; </p>
+          </div>
+          
+          <!-- 项目2 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-eye text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">Data2&nbsp;</h4>
+                <p class="text-gray-500 text-sm">Download&nbsp;</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+            Source/Introduction&nbsp; </p>
+          </div>
+          
+          <!-- 项目3 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-brain text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">Data3&nbsp;</h4>
+                <p class="text-gray-500 text-sm">Download&nbsp;</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+              Source/Introduction
+            </p>
+          </div>
+          
+          <!-- 项目4 -->
+          <div class="bg-white p-6 rounded-lg shadow-md hover-scale">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                <i class="fa fa-computer text-xl"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-lg">Data4&nbsp;</h4>
+                <p class="text-gray-500 text-sm">Download&nbsp;</p>
+              </div>
+            </div>
+            <p class="text-gray-700">
+              Source/Introduction
+            </p>
+          </div>
+        </div>
+       </div>
+    </section>
+
+
+  <!-- 联系方式 -->
+  <section id="contact" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-dark mb-4">Contact Details</h2>
+        <div class="w-20 h-1 bg-primary mx-auto"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <div class="bg-white p-8 rounded-lg shadow-md h-full">
+            <h3 class="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+            
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                  <i class="fa fa-map-marker"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">Addresses</h4>
+                  <p class="text-gray-600">
+                    No. 27, Shan Da South Road, Jinan City, Shandong Province, China<br>
+                    Postcode：250100
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                  <i class="fa fa-envelope"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">E-mail</h4>
+                  <p class="text-gray-600">
+                    jipengzhang@sdu.edu.cn<br>
+                    
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                  <i class="fa fa-phone"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">Office Location</h4>
+                  <p class="text-gray-600">
+                    Hongjiadou Campus of Shandong University<br>
+                    
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4">
+                  <i class="fa fa-clock-o"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-gray-800 mb-1">Office Hours</h4>
+                  <p class="text-gray-600">
+                    Monday to Friday: 9:00 - 12:00, 14:00 - 17:00<br>
+                    Please contact us by email in advance.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8">
+<div class="flex space-x-4"> </div>
+            </div>
+          </div>
+        </div>
+</div>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-dark text-white py-12">
+    <div class="container mx-auto px-4"> </div>
+  </footer>
+
+  <!-- 回到顶部按钮 -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all z-50">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script>
+    // 导航栏滚动效果
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('py-2', 'shadow-md');
+        navbar.classList.remove('py-3');
+      } else {
+        navbar.classList.add('py-3');
+        navbar.classList.remove('py-2', 'shadow-md');
+      }
+    });
+    
+    // 移动端菜单切换
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      if (mobileMenu.classList.contains('hidden')) {
+        menuToggle.innerHTML = '<i class="fa fa-bars text-xl"></i>';
+      } else {
+        menuToggle.innerHTML = '<i class="fa fa-times text-xl"></i>';
+      }
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          
+          // 关闭移动端菜单
+          if (!mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+            menuToggle.innerHTML = '<i class="fa fa-bars text-xl"></i>';
+          }
+        }
+      });
+    });
+	  
+	  
+     	   const loadMoreBtn = document.getElementById('load-more-btn');
+            const morePublications = document.querySelectorAll('.more-publications');
+            let isExpanded = false;
+            
+            loadMoreBtn.addEventListener('click', function() {
+                isExpanded = !isExpanded;
+                
+                if (isExpanded) {
+                    // 显示更多论文
+                    morePublications.forEach(el => {
+                        el.classList.remove('hidden');
+                        el.classList.add('animate-fadeIn');
+                    });
+                    loadMoreBtn.innerHTML = 'Put away these papers <i class="fa fa-arrow-up ml-2"></i>';
+                    
+                    // 平滑滚动到第一个新加载的论文
+                    setTimeout(() => {
+                        const firstExpandedPub = document.querySelector('.more-publications > div:first-child');
+                        if (firstExpandedPub) {
+                            firstExpandedPub.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 300);
+                } else {
+                    // 隐藏更多论文
+                    morePublications.forEach(el => {
+                        el.classList.add('hidden');
+                    });
+                    loadMoreBtn.innerHTML = 'View more papers <i class="fa fa-arrow-down ml-2"></i>';
+                }
+            });
+            
+            
+    // 回到顶部按钮
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        backToTopButton.classList.remove('opacity-0', 'invisible');
+        backToTopButton.classList.add('opacity-100', 'visible');
+      } else {
+        backToTopButton.classList.add('opacity-0', 'invisible');
+        backToTopButton.classList.remove('opacity-100', 'visible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // 论文筛选
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // 移除所有按钮的活动状态
+        filterButtons.forEach(btn => {
+          btn.classList.remove('bg-primary', 'text-white');
+          btn.classList.add('bg-gray-200', 'hover:bg-primary', 'hover:text-white');
+        });
+        
+        // 添加当前按钮的活动状态
+        button.classList.remove('bg-gray-200', 'hover:bg-primary', 'hover:text-white');
+        button.classList.add('bg-primary', 'text-white');
+        
+        // 这里可以添加实际的筛选逻辑
+        const filter = button.textContent.trim();
+        console.log('筛选:', filter);
+      });
+    });
+  </script>
+</body>
+</html>
+    
